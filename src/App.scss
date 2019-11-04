@@ -4,21 +4,22 @@
 }
 
 .scoreboard {
-  width: 58%;
+  width: 65%;
   margin: 10rem auto;
-  background-color: #0b5402;
+  background-color: var(--black);
   color: white;
   border-radius: 0.5rem;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 25%;
   margin-top: 10rem;
   padding: 5rem;
-  border: 4px solid #aaaaaa;
-}
-
-.topRow {
-  display: flex;
-  justify-content: space-around;
-  place-items: center;
-  /* height: 20rem; */
+  border: 4px ridge #aaaaaa;
+  
+  .topRow {
+    display: flex;
+    justify-content: space-around;
+    place-items: center;
+  }
 }
 
 .home,

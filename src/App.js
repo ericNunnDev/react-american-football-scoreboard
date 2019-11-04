@@ -1,11 +1,18 @@
 //TODO: STEP 1 - Import the useState hook.
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.scss";
 import BottomRow from "./BottomRow";
 
 function App() {
   const [homeScore, setHomeScore] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
+  const [timer, setTimer] = useState(0);
+
+  useEffect(() => {
+    setInterval(() => {
+      setTimer(timer => timer + 1);
+    }, 1000)
+  }, []);
 
   return (
     <div className="container">
@@ -15,7 +22,7 @@ function App() {
             <h2 className="home__name">Lions</h2>
             <div className="home__score">{homeScore}</div>
           </div>
-          <div className="timer">00:03</div>
+          <div className="timer">{timer}</div>
           <div className="away">
             <h2 className="away__name">Tigers</h2>
             <div className="away__score">{awayScore}</div>
