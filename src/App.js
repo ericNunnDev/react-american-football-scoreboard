@@ -1,4 +1,3 @@
-//TODO: STEP 1 - Import the useState hook.
 import React, { useState, useEffect } from "react";
 import "./App.scss";
 import BottomRow from "./components/BottomRow";
